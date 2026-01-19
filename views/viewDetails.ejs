@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('head', {title: title}) %>
+
+<body>
+  <div class="wrapper">
+    <div class="view-message">
+      <div>
+        <h1><%= message.user %></h1>
+        <p><%= message.added %></p>
+      </div>
+      <p><%= message.text %></p>
+    </div>
+  </div>
+</body>
+
+</html>
