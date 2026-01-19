@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('head', {title: title}) %>
+	<body>
+		<div class="wrapper">
+			<%- include('navbar') %>
+			<div class="form-container">
+				<h2>New Message</h2>
+				<form action="/new" method="post">
+					<label for="messageUser">Username</label>
+					<input type="text" id="user" name="messageUser" required />
+					<label for="messageText">Message</label>
+					<textarea
+						id="message"
+						name="messageText"
+						rows="4"
+						cols="50"
+						required
+					></textarea>
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

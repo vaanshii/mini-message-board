@@ -1,0 +1,10 @@
+<% const options = { weekday: 'long', year: 'numeric', month: 'long', day:
+'numeric', hour: 'numeric' }; %>
+
+<div class="message">
+	<div class="info">
+		<h3 class="user"><%= user %></h3>
+		<p class="added"><%= added.toLocaleDateString('en-US', options) %></p>
+	</div>
+	<p class="text"><%= text %></p>
+</div>

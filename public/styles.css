@@ -1,0 +1,163 @@
+a {
+	text-decoration: none;
+	color: #000;
+	font-size: 1.5rem;
+}
+
+a:hover {
+	color: #7a7a7a;
+	text-decoration: underline;
+}
+
+body {
+	background-color: #f8fafc;
+	font-family: "Outfit", sans-serif;
+	color: #1e293b;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+
+	background-color: #e2e8f0;
+	width: 700px;
+	height: 90vh;
+
+	border-radius: 12px;
+
+	margin: 2rem 0;
+}
+
+.navbar {
+	max-width: 700px;
+
+	margin-top: 2rem;
+	padding: 1.3rem 1rem;
+
+	display: flex;
+	justify-content: center;
+	gap: 7rem;
+	align-self: center;
+
+	background-color: #ffffff;
+	border-radius: 8px;
+
+	-webkit-box-shadow: 0px 10px 13px -7px #000000,
+		5px 5px 8px 5px rgba(0, 0, 0, 0);
+	box-shadow: 0px 10px 13px -7px #000000, 5px 5px 8px 5px rgba(0, 0, 0, 0);
+}
+
+.message-board {
+	margin: 0 2rem;
+	overflow-y: auto;
+
+	/* Firefox Support */
+	scrollbar-width: thin;
+	scrollbar-color: transparent transparent;
+	transition: scrollbar-color 0.3s ease;
+}
+
+/* Firefox Hover */
+.message-board:hover {
+	scrollbar-color: #2d2d2d transparent;
+}
+
+/* Webkit (Chrome/Safari/Edge) */
+.message-board::-webkit-scrollbar {
+	width: 10px;
+}
+
+.message-board::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.message-board::-webkit-scrollbar-thumb {
+	/* Using the 'Charcoal' from the palette */
+	background-color: transparent;
+	border-radius: 20px;
+
+	/* Creates the thin floating look */
+	border: 3px solid transparent;
+	background-clip: content-box;
+	transition: background-color 0.3s ease;
+}
+
+/* Show thumb on hover */
+.message-board:hover::-webkit-scrollbar-thumb {
+	background-color: #2d2d2d;
+}
+
+/* Subtle interaction when clicking the bar */
+.message-board::-webkit-scrollbar-thumb:active {
+	background-color: #8a9a5b; /* Using the 'Sage' accent color when clicked! */
+}
+
+.message {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+
+	margin-bottom: 2rem;
+	padding-bottom: 0.5rem;
+
+	border-bottom: 2px solid #1e293b2a;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+.message .info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	p {
+		font-size: 0.8rem;
+		color: #1e293bc2;
+	}
+}
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-container form {
+	display: flex;
+	flex-direction: column;
+
+	gap: 0.5rem;
+
+	input {
+		border-radius: 6px;
+	}
+
+	textarea {
+		resize: none;
+		border-radius: 6px;
+	}
+
+	button {
+		margin-top: 1rem;
+		color: #090909;
+		padding: 0.7em 1.7em;
+		font-size: 1rem;
+		border-radius: 0.5em;
+		background: #e8e8e8;
+		cursor: pointer;
+		border: 1px solid #e8e8e8;
+		transition: all 0.3s;
+		box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+	}
+
+	button:active {
+		color: #666;
+		box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+	}
+}
